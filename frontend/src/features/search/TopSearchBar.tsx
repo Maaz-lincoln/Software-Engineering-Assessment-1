@@ -74,7 +74,7 @@ const TopSearchBar = ({
   };
 
   return (
-    <div className="relative w-full max-w-8xl mx-auto">
+    <div className="relative w-full  max-w-8xl mx-auto">
       <div className="flex items-center gap-3 rounded-xl shadow-lg">
         {/* Search Input */}
         <div className="relative flex-1">
@@ -164,7 +164,7 @@ const TopSearchBar = ({
           <div
             ref={modalRef}
             onMouseDown={handleModalMouseDown}
-            className="absolute z-30 w-full mt-2 bg-zinc-800 border border-zinc-700 rounded-xl shadow-xl p-4"
+            className="absolute z-30 w-full max-h-48 overflow-y-scroll  mt-2 bg-zinc-800 border border-zinc-700 rounded-xl shadow-xl p-4"
           >
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center gap-2">

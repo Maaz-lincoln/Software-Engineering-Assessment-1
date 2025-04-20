@@ -14,7 +14,7 @@ export default function RecentSearchChips({
 
   return (
     <div className="flex flex-wrap gap-2 mt-4 items-center">
-      {searches.map((search, index) => (
+      {searches.slice(0, 4).map((search, index) => (
         <div
           key={index}
           className="group flex items-center px-4 py-2 rounded-full bg-zinc-800/50 text-zinc-300 text-sm border border-zinc-700/50 hover:bg-zinc-700/80 hover:border-yellow-400/50 transition-all duration-200"
