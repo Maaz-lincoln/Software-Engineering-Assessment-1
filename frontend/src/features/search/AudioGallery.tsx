@@ -70,7 +70,7 @@ export default function AudioGallery({
   }
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 ">
       {audios.map((audio) => {
         const waveform = Array.isArray(audio.waveform)
           ? audio.waveform
@@ -101,16 +101,19 @@ export default function AudioGallery({
             </div>
             <div className="flex-1">
               <div className="flex items-center gap-2">
-                <h3 className="text-zinc-100 font-semibold truncate">
+                <h3 className="text-zinc-100 !w-[50vw] font-semibold truncate">
                   {audio.title || "Untitled"}
                 </h3>
+              </div>
+              <div className="flex gap-2 items-center mt-1">
+                <p className="text-sm text-zinc-400">
+                  by {audio.creator || "Unknown"}
+                </p>
+
                 <span className="text-xs text-zinc-400">
-                  {audio.license.toUpperCase()}
+                  lisence:{audio.license.toUpperCase()}
                 </span>
               </div>
-              <p className="text-sm text-zinc-400">
-                by {audio.creator || "Unknown"}
-              </p>
               <div className="mt-2 flex items-center gap-1 h-6">
                 {waveform.slice(0, 100).map((val, i) => (
                   <div
